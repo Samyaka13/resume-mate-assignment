@@ -21,7 +21,7 @@ function Page() {
             <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
                 <Button
                     onClick={() => router.back()}
-                    className="bg-gray-200 hover:bg-gray-300 text-black font-medium px-3 py-2 sm:px-4 sm:py-2 rounded flex items-center gap-2 text-sm sm:text-base"
+                    className="bg-gray-200 cursor-pointer hover:bg-gray-300 text-black font-medium px-3 py-2 sm:px-4 sm:py-2 rounded flex items-center gap-2 text-sm sm:text-base"
                 >
                     <Image width={18} height={18} src="/chevron-left.svg" alt="Back icon" />
                     Back
@@ -36,6 +36,7 @@ function Page() {
                 <Button
                     type='button'
                     onClick={handlePrint}
+                    cursor-pointer
                     className='w-full max-w-xs sm:w-60 bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold rounded-lg px-6 py-3 flex items-center justify-center gap-2 text-sm sm:text-base'
                 >
                     <Image width={20} height={20} src="/Download.svg" alt="Download icon" />
