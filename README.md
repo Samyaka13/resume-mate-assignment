@@ -104,5 +104,4 @@ You can check the live deployment here:
 ## Author
 
 Samyak Ajmera
-
 #### LinkedIn - [Click Here](https://www.linkedin.com/in/samyak-ajmera/)
