@@ -1,5 +1,4 @@
-import Screen1 from "@/app/screen1/page";
-import Image from "next/image";
+import Screen1 from "./screen1/page";
 
 export default function Home() {
   return (
