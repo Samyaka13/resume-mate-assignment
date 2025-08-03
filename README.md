@@ -100,8 +100,5 @@ You can check the live deployment here:
 🔗 https://resume-mate-assignment-three.vercel.app/
 
 ## Author
-
-## Author
-
 Samyak Ajmera
 #### LinkedIn - [Click Here](https://www.linkedin.com/in/samyak-ajmera/)
