@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import { useFormStore } from '../store/useFormStore';
 import PrintableCard from '@/components/PrintableCard';
 
-function page() {
+function Page() {
     const printComponent = useRef<HTMLDivElement>(null);
     const handlePrint = useReactToPrint({
         contentRef: printComponent
@@ -44,4 +44,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;
