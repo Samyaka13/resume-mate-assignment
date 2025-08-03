@@ -46,25 +46,25 @@ function Screen1() {
         setAll(formData)
         setTimeout(() => {
             handlePrint()
-
         }, 100)
     }
 
     return (
-        <div className='flex ml-80 mt-10 flex-col items-center justify-center w-full max-w-3xl gap-5'>
-
-            <div style={{ display: "none" }}>
+        <div className="flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-10 py-10">
+            <div className="hidden">
                 <div ref={printableRef}>
                     <PrintableCard />
                 </div>
             </div>
 
-            <h1 className='flex font-bold text-4xl justify-center items-center w-full'>Add your details</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-center w-full">Add your details</h1>
 
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(submitHandler)} className='flex flex-col gap-5 items-center w-full'>
-                    <Card className='w-full p-10 justify-center items-center'>
-
+                <form
+                    onSubmit={form.handleSubmit(submitHandler)}
+                    className="w-full max-w-2xl flex flex-col gap-5"
+                >
+                    <Card className="p-6 sm:p-8 md:p-10 shadow-lg w-full">
                         {formFields.map((field) => (
                             <FormField
                                 key={field.name}
@@ -72,7 +72,7 @@ function Screen1() {
                                 name={field.name as keyof z.infer<typeof FormSchema>}
                                 render={({ field: formField }) => (
                                     <FormItem className="w-full">
-                                        <FormLabel className="flex items-center font-bold text-lg gap-2">
+                                        <FormLabel className="flex items-center font-bold text-base sm:text-lg gap-2">
                                             <Image src={field.icon} width={20} height={20} alt={`${field.label} icon`} />
                                             {field.label}
                                         </FormLabel>
@@ -85,7 +85,7 @@ function Screen1() {
                             />
                         ))}
 
-                        <div className='flex w-full justify-center gap-3.5 mt-5'>
+                        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 w-full">
                             <Button
                                 type="button"
                                 onClick={async () => {
@@ -96,20 +96,19 @@ function Screen1() {
                                         router.push('/screen2')
                                     }
                                 }}
-                                className='w-3/7 cursor-pointer bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold rounded-lg px-6 py-3 flex items-center gap-2'
+                                className="w-full sm:w-1/2 bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold rounded-lg px-6 py-3"
                             >
                                 View PDF
                             </Button>
 
                             <Button
                                 type='submit'
-                                className='w-3/7 cursor-pointer bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold rounded-lg px-6 py-3 flex items-center gap-2'
+                                className="w-full sm:w-1/2 bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold rounded-lg px-6 py-3 flex items-center justify-center gap-2"
                             >
-                                <Image width={30} height={30} src="/download.svg" alt="Download icon" />
+                                <Image width={24} height={24} src="/download.svg" alt="Download icon" />
                                 Download PDF
                             </Button>
                         </div>
-
                     </Card>
                 </form>
             </Form>
