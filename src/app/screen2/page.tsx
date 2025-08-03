@@ -18,7 +18,6 @@ function Page() {
 
     return (
         <div className="flex flex-col items-center justify-start px-4 py-8 min-h-screen bg-gray-50 relative">
-            {/* Back Button */}
             <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
                 <Button
                     onClick={() => router.back()}
@@ -29,19 +28,17 @@ function Page() {
                 </Button>
             </div>
 
-            {/* Printable Card Section */}
             <div className="w-full mt-20 sm:mt-24 max-w-full sm:max-w-2xl px-2 sm:px-0">
                 <PrintableCard ref={printComponent} />
             </div>
 
-            {/* Download Button */}
             <div className="mt-8 sm:mt-10 w-full flex justify-center">
                 <Button
                     type='button'
                     onClick={handlePrint}
                     className='w-full max-w-xs sm:w-60 bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold rounded-lg px-6 py-3 flex items-center justify-center gap-2 text-sm sm:text-base'
                 >
-                    <Image width={20} height={20} src="/download.svg" alt="Download icon" />
+                    <Image width={20} height={20} src="/Download.svg" alt="Download icon" />
                     Download PDF
                 </Button>
             </div>

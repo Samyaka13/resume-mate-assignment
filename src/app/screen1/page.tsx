@@ -105,7 +105,7 @@ function Screen1() {
                                 type='submit'
                                 className="w-full sm:w-1/2 bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold rounded-lg px-6 py-3 flex items-center justify-center gap-2"
                             >
-                                <Image width={24} height={24} src="/download.svg" alt="Download icon" />
+                                <Image width={24} height={24} src="/Download.svg" alt="Download icon" />
                                 Download PDF
                             </Button>
                         </div>
